@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Qingyu Qu (屈清宇)</title>
+    <title>Qingyuan Qu (曲清源)</title>
     <style>
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
@@ -13,8 +13,41 @@
             margin: 0 auto;
             padding: 40px 20px;
         }
+        
+        /* Two-column layout matching the template repo */
+        .profile-container {
+            display: flex;
+            flex-direction: column-reverse;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 20px;
+        }
+        @media (min-width: 600px) {
+            .profile-container {
+                flex-direction: row;
+            }
+            .profile-text {
+                flex: 1;
+                padding-right: 20px;
+            }
+        }
+        
+        .profile-photo-wrapper {
+            flex-shrink: 0;
+            margin: 0 auto;
+        }
+        .profile-photo {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 1px solid #ddd;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+        }
+
         h1 {
             font-size: 2.2rem;
+            margin-top: 0;
             margin-bottom: 5px;
         }
         h2 {
@@ -73,35 +106,50 @@
 </head>
 <body>
 
-    <h1>Qingyu Qu (屈清宇)</h1>
-    <div class="email">
-        qyqu@example.edu &nbsp;|&nbsp; quqingyuan.ai@gmail.com
+    <!-- Flexbox Container for Text and Photo -->
+    <div class="profile-container">
+        
+        <div class="profile-text">
+            <h1>Qingyu Qu (屈清宇)</h1>
+            <div class="email">
+                qingyuqu0@gmail.com &nbsp;|&nbsp; 2285078118@qq.com
+            </div>
+
+            <p>
+                Hi! I'm Qingyu Qu (屈清宇). I am a researcher interested in learning and representation of nature data, especially by artificial and biological network. 
+            </p>
+
+            <p>
+                Get my <a href="resume.pdf" target="_blank">CV here</a> / 
+                Follow my updates on <a href="https://github.com/QuQingY" target="_blank">GitHub</a>.
+            </p>
+        </div>
+
+        <!-- Personal Photo Block -->
+        <div class="profile-photo-wrapper">
+            <!-- Replace 'your-photo.jpg' with your actual image file name uploaded to your repo -->
+            <img src="your-photo.jpg" alt="Qingyuan Qu" class="profile-photo">
+        </div>
+
     </div>
 
-    <p>
-        Hi! I'm Qingyu Qu (屈清宇). I am a passionate researcher working on Learning and Representation for Artificial and Biological Networks.
-    </p>
-
+    <!-- Core Research Philosophy Section -->
     <div class="intro-box">
         <strong>My Core Research Philosophy:</strong><br>
-        • <strong>Data is the king:</strong> Design sensible experiments and observables for artificial networks. Respect measurements in biological networks<br>
+        • <strong>Simplicity:</strong> Stripping away training overhead to uncover raw neural network capabilities.<br>
         • <strong>Interpretability:</strong> Building architectures that don't just solve problems, but reveal <em>how</em> they solved them.<br>
         • <strong>Discovery:</strong> Using AI agents to automate scientific tracking and map design spaces efficiently.
     </div>
 
     <p>
-        Get my <a href="resume.pdf" target="_blank">CV here</a> / 
-        Follow my updates on <a href="https://github.com/QuQingY" target="_blank">GitHub</a>.
-    </p>
-
-    <p>
         I am currently devoted to two core thrusts:
     </p>
     <ul>
-        <li><strong>A.</li>
+        <li><strong>Structural Mechanics of Neural Nets:</strong> Understanding sudden convergence spikes, grokking phenomena, and optimizing minimal loss landscapes.</li>
         <li><strong>AI for Data Exploration:</strong> Developing autonomous agents capable of generating self-consistent experimental loops.</li>
     </ul>
 
+    <!-- Selected Publications Section -->
     <h2>Selected Publications</h2>
 
     <div class="pub-item">
@@ -125,6 +173,7 @@
         [<a class="pdf-link" href="#">PDF</a>] [<a href="https://github.com/QuQingY" target="_blank">Project Page</a>]
     </div>
 
+    <!-- Research Projects/Repositories Section -->
     <h2>Open-Source Projects</h2>
     <ul>
         <li>
@@ -137,9 +186,10 @@
         </li>
     </ul>
 
+    <!-- Footer or contact context -->
     <h2>Contact & Links</h2>
     <p>
-        If you are interested in collaborating, please drop me an email or open an issue on my GitHub repositories!
+        If you are interested in collaborating on mechanistic interpretability or AI for Science, please drop me an email or open an issue on my GitHub repositories!
     </p>
 
 </body>
